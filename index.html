@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鮎のつかみどり 企画書｜商工会青年部</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      background: #F4F7FB;
+      color: #222;
+      line-height: 1.8;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #1F497D;
+      color: #fff;
+      padding: 32px 24px 28px;
+      text-align: center;
+    }
+    header .sub {
+      font-size: 13px;
+      opacity: 0.75;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    header h1 {
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+    }
+
+    /* メインコンテナ */
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 0 16px 60px;
+    }
+
+    /* セクション */
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+
+    section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1F497D;
+      border-left: 4px solid #1F497D;
+      padding-left: 12px;
+      margin-bottom: 20px;
+    }
+
+    section h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2E5E9C;
+      margin: 20px 0 8px;
+    }
+
+    section p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* テーブル */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    thead tr {
+      background: #1F497D;
+      color: #fff;
+    }
+    thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+    }
+    tbody tr:nth-child(odd) { background: #F5F9FF; }
+    tbody tr:nth-child(even) { background: #fff; }
+    tbody td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #E0E8F0;
+      vertical-align: middle;
+    }
+    tbody td:first-child {
+      font-weight: 700;
+      color: #1F497D;
+      background: #DCE6F1;
+      width: 140px;
+      white-space: nowrap;
+    }
+
+    /* 理由ブロック */
+    .reason {
+      background: #F5F9FF;
+      border-left: 3px solid #2E5E9C;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+    .reason .reason-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1F497D;
+      margin-bottom: 6px;
+    }
+    .reason p {
+      margin: 0;
+      font-size: 13.5px;
+      color: #444;
+    }
+
+    /* 箇条書き */
+    ul.custom {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    ul.custom li {
+      font-size: 14px;
+      color: #333;
+      padding: 5px 0 5px 20px;
+      position: relative;
+      border-bottom: 1px dashed #E8EFF8;
+    }
+    ul.custom li:last-child { border-bottom: none; }
+    ul.custom li::before {
+      content: "・";
+      position: absolute;
+      left: 0;
+      color: #1F497D;
+      font-weight: 700;
+    }
+
+    /* 準備物グリッド */
+    .supplies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 4px;
+    }
+    .supply-group h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    /* スタッフテーブル */
+    .staff-table tbody td:first-child {
+      width: 160px;
+    }
+
+    /* 会場レイアウト */
+    .layout-img {
+      display: block;
+      max-width: 100%;
+      margin: 12px auto 0;
+      border-radius: 8px;
+      border: 1px solid #D0DCEA;
+    }
+
+    /* フッター */
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      padding: 24px 0 40px;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 16px; }
+      tbody td:first-child { width: 100px; font-size: 12px; }
+      .supplies-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="sub">商工会青年部｜があっぱ祭り 企画書</div>
+  <h1>鮎のつかみどり</h1>
+</header>
+
+<main>
+
+  <!-- 1. 実施概要 -->
+  <section>
+    <h2>１．実施概要</h2>
+    <table>
+      <thead>
+        <tr><th>項目</th><th>内容</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>日時</td><td>8月　があっぱ祭り当日　午前10時〜</td></tr>
+        <tr><td>場所</td><td>祭り会場内（設営場所）</td></tr>
+        <tr><td>対象</td><td>プールに一人で入れる年齢〜小学6年生</td></tr>
+        <tr><td>定員</td><td>約500名（先着）</td></tr>
+        <tr><td>参加費</td><td>無料</td></tr>
+        <tr><td>事前予約</td><td>なし（当日参加のみ）</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 2. 実施内容・運営方法 -->
+  <section>
+    <h2>２．実施内容・運営方法</h2>
+
+    <h3>受付・整列</h3>
+    <p>テント下に2列で並んでいただき、順番に案内します。事前予約・整理券は不要で、当日参加のみとします。</p>
+
+    <h3>つかみ取り体験</h3>
+    <p>7メートル四方のプールを2基設置し、1プールにつき同時に約10名が入れます。</p>
+    <p>つかみ取りが終了した人を速やかにプールの外に案内し、常に10名程度がプールにいるように、プールの中にいる状態を保ちながら円滑に運営します。</p>
+    <p>プールは年齢で分けず、兄弟・きょうだいで一緒に入れるようにします。（7メートル四方のプールに10名程度であれば、年齢差があっても十分な安全スペースを確保できます。）</p>
+    <p>1人1匹まで、自分でつかまえます。</p>
+
+    <h3>鮎の準備数</h3>
+    <p>鮎は約500匹を用意します。（鮎の大きさにより匹数は変動するため目安）</p>
+
+    <h3>焼き・提供</h3>
+    <p>つかみ取りをした鮎は一旦回収し、焼き場でスタッフが順次焼いていきます。</p>
+    <p>自分が取った鮎をそのまま焼くわけではなく、焼き場では連続して焼き続ける方式です。</p>
+    <p>焼き上がった鮎を参加者に1人1匹ずつ提供します。</p>
+  </section>
+
+  <!-- 3. 参加費の無償化 -->
+  <section>
+    <h2>３．参加費の無償化について</h2>
+    <p>企画部会では有料化の検討がなされていましたが、本企画は無料での実施を提案します。理由は以下の通りです。</p>
+
+    <div class="reason">
+      <div class="reason-title">①　子どものための事業であること</div>
+      <p>本企画は子どもたちの体験・思い出づくりを目的としたものです。一度でも参加費を徴収すると、翌年以降に無料に戻すことが難しくなります。地域の子どもたちに開かれた事業として、無償で継続できる仕組みにしておくことが重要と考えます。</p>
+    </div>
+
+    <div class="reason">
+      <div class="reason-title">②　参加者の負担への配慮</div>
+      <p>前回は祭りの前に開催し事前受付も行っていたため、参加者は祭りの流れの中で気軽に参加できる環境が整っていました。しかし今回は午前10時からの開催となるため、つかみ取りのために一度来場し、濡れた後に着替えのためいったん帰宅してから、改めて祭りへ来るという流れになる可能性があります。参加者にとってすでに来場の手間が増える状況であることを踏まえ、参加費の負担をなくすことで参加しやすい環境を整えます。</p>
+    </div>
+
+    <div class="reason">
+      <div class="reason-title">③　有償化による運営上の制約</div>
+      <p>参加費を徴収する場合、保健所への臨時営業許可申請が必要となります。屋外での腹出し（内臓処理）などの調理行為が制限され、現在想定している青年部主体の運営方法では実施が困難になります。甲佐町の事例のように焼きのプロに外部委託すれば解決できる部分もありますが、本企画は青年部が自ら運営するものであり、外部委託の導入は現実的ではありません。</p>
+    </div>
+
+    <div class="reason">
+      <div class="reason-title">④　運営の簡素化</div>
+      <p>参加費がなければ受付での金銭授受が不要となり、スタッフの負担軽減・トラブル防止にもつながります。</p>
+    </div>
+  </section>
+
+  <!-- 4. 広報活動 -->
+  <section>
+    <h2>４．広報活動</h2>
+    <h3>実施内容</h3>
+    <ul class="custom">
+      <li>チラシ作成・配布</li>
+      <li>WEBサイトの作成</li>
+      <li>各種SNSでの告知</li>
+      <li>PTAへの呼びかけ</li>
+    </ul>
+  </section>
+
+  <!-- 5. 準備物 -->
+  <section>
+    <h2>５．準備物</h2>
+    <div class="supplies-grid">
+      <div class="supply-group">
+        <h3>プール設営関係</h3>
+        <ul class="custom">
+          <li>ブルーシート（9メートル四方）</li>
+          <li>単管・インパクトドライバー・結束バンド</li>
+          <li>消防車（河川からの取水用）</li>
+          <li>パイロンバー（役場より借用）</li>
+          <li>ビニールテープ（侵入禁止ライン・待合列の設置用）</li>
+        </ul>
+      </div>
+      <div class="supply-group">
+        <h3>受付・運営関係</h3>
+        <ul class="custom">
+          <li>テント（受付用）・スーパーテント</li>
+          <li>受付テーブル</li>
+          <li>拡声器</li>
+          <li>案内用看板</li>
+          <li>ビニール袋</li>
+        </ul>
+      </div>
+      <div class="supply-group">
+        <h3>調理・衛生関係</h3>
+        <ul class="custom">
+          <li>U字溝（あゆ焼き用）</li>
+          <li>裁き台・包丁</li>
+          <li>串・塩・炭・着火剤・ライター</li>
+          <li>バケツ</li>
+          <li>クーラーボックス・氷</li>
+          <li>消毒用アルコール</li>
+          <li>ゴミ袋</li>
+        </ul>
+      </div>
+      <div class="supply-group">
+        <h3>その他（推奨）</h3>
+        <ul class="custom">
+          <li>暑さ対策として飲み物の準備（スタッフ・参加者向け）</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. スタッフ・ボランティア体制 -->
+  <section>
+    <h2>６．スタッフ・ボランティア体制</h2>
+    <p>本企画はオペレーションが多岐にわたるため、青年部員だけでの運営は困難です。以下の係が必要となります。</p>
+
+    <table class="staff-table" style="margin-top:16px;">
+      <thead>
+        <tr><th>係</th><th>主な役割</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>プール監視係</td><td>参加者の安全確認・プール内の状況管理</td></tr>
+        <tr><td>誘導・整列係</td><td>待合列の案内・スムーズな入退場の誘導</td></tr>
+        <tr><td>受付係</td><td>参加者の案内・人数管理</td></tr>
+        <tr><td>魚捌き係</td><td>アユの内臓処理</td></tr>
+        <tr><td>焼き係</td><td>アユを順次焼き、参加者へ提供</td></tr>
+        <tr><td>鮎追加係</td><td>アユの在庫状況を確認し、必要に応じて追加・補充を行う</td></tr>
+        <tr><td>水・氷追加係</td><td>プールの水量および氷の残量を管理し、不足時に補充対応を行う</td></tr>
+        <tr><td>その他補助</td><td>各係のサポート・ゴミ管理など</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:24px;">ボランティアの確保</h3>
+    <ul class="custom">
+      <li>学校のボランティア活動が内申点に関係する取り組みの一環として活用できることから、地域の中学・高校生に対して正式な文書を通じてボランティアを募集します。</li>
+      <li>一般ボランティアおよびPTA有志にも広く協力を呼びかけます。</li>
+    </ul>
+  </section>
+
+  <!-- 7. 当日会場レイアウト -->
+  <section>
+    <h2>７．当日会場レイアウト</h2>
+    <img class="layout-img" src="honbun.png" alt="当日会場レイアウト図">
+  </section>
+
+</main>
+
+<footer>
+  商工会青年部｜があっぱ祭り 企画書
+</footer>
+
+</body>
+</html>
