@@ -170,6 +170,26 @@
       border: 1px solid #D0DCEA;
     }
 
+    /* PDFダウンロード */
+    .pdf-bar {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .pdf-btn {
+      display: inline-block;
+      background: #1F497D;
+      color: #fff;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 36px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: background 0.2s;
+    }
+    .pdf-btn:hover { background: #163761; }
+
     /* フッター */
     footer {
       text-align: center;
@@ -193,6 +213,10 @@
 </header>
 
 <main>
+
+  <div class="pdf-bar">
+    <a class="pdf-btn" href="企画書.pdf" download>📄 企画書をPDFでダウンロード</a>
+  </div>
 
   <!-- 1. 実施概要 -->
   <section>
